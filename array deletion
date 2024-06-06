@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main() {
+    int arr[100], size, position;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Enter the position from where the element is to be deleted: ");
+    scanf("%d", &position);
+    if (position < 0 || position >= size) {
+        printf("Invalid position! Please enter a position between 0 and %d\n", size - 1);
+    } else {
+        for (int i = position; i < size - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        size--; 
+        printf("Array after deletion:\n");
+        for (int i = 0; i < size; i++) {
+            printf("%d ", arr[i]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+Input:
+Enter the size of the array: 5
+Enter the elements of the array:
+10 20 30 40 50
+Enter the position from where the element is to be deleted: 2
+
+Output:
+Array after deletion:
+10 20 40 50
