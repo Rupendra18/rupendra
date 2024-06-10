@@ -18,7 +18,7 @@ void printArray(int array[], int size) {
     printf("\n");
 }
 int main() {
-    int array[] = {12, 11, 13, 5, 6};
+    int array[] ={12, 11, 13, 5, 6};
     int size = sizeof(array) / sizeof(array[0]);
     printf("Unsorted array: \n");
     printArray(array, size);
@@ -27,3 +27,10 @@ int main() {
     printArray(array, size);
     return 0;
 }
+input:
+ 12,11,13,5,6
+output:
+Unsorted array: 
+12 11 13 5 6 
+sorted:
+5 6 11 12 13 
